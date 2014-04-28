@@ -41,7 +41,7 @@ exports.testMIDoesExist = function(assert) {
   assert.equal(menuitem.getAttribute('accesskey'), '', 'menuitem accesskey is ok');
   assert.equal(menuitem.getAttribute('class'), '', 'menuitem class is ok');
   assert.equal(menuitem.nextSibling, undefined, 'menuitem is last');
-  assert.equal(menuitem.hasAttribute("checked"), false, 'menuitem not checked');
+  assert.equal(menuitem.getAttribute('checked'), 'false', 'menuitem not checked');
   mi.destroy();
   assert.ok(!$(options.id), 'menuitem is gone');
   assert.equal(menuitem.parentNode, null, 'menuitem has no parent');
